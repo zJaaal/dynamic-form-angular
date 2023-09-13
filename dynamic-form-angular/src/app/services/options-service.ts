@@ -4,7 +4,7 @@ import { of } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class OptionsServiceService {
+export class OptionsService {
   constructor() {}
 
   getOptions() {

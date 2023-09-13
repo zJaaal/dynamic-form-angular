@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { Row } from '../models';
 
 @Injectable({
   providedIn: 'root',
 })
-export class FieldsServiceService {
+export class FieldsService {
   constructor() {}
 
-  getFields() {
+  getFields(): Observable<unknown[]> {
     return of([
       {
         divider: {
