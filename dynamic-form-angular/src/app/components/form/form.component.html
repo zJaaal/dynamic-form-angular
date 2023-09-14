@@ -1,1 +1,14 @@
 <p>form works!</p>
+
+<form>
+  <div class="row" *ngFor="let row of fields">
+    <div class="column" *ngFor="let column of row.columns">
+      <app-field
+        *ngFor="let field of column.fields"
+        [label]="field.name"
+        [hint]="field.hint"
+      >
+      </app-field>
+    </div>
+  </div>
+</form>

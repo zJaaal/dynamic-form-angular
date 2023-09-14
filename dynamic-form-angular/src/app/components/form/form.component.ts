@@ -5,7 +5,7 @@ import { FieldsService } from 'src/app/services/fields-service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.sass'],
+  styleUrls: ['./form.component.scss'],
   providers: [FieldsService],
 })
 export class FormComponent implements OnInit {

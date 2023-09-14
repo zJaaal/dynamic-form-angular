@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormComponent } from './components/form/form.component';
+import { FieldComponent } from './components/field/field.component';
+import { FieldHostDirective } from './directives/field-host.directive';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent],
+  declarations: [AppComponent, FormComponent, FieldComponent, FieldHostDirective],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
