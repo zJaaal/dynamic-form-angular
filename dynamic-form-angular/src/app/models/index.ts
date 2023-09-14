@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { ViewContainerRef } from '@angular/core';
 
 export interface Field extends Validator, IgnoredProperties {
-  fieldType: string;
+  fieldType: Fields;
   fieldTypeLabel: string;
   fieldVariables: string[];
   hint?: string;
@@ -24,12 +24,21 @@ export interface Column extends IgnoredProperties {
 }
 
 interface IgnoredProperties {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
-export type FieldConstructor = () => Component;
+export type FieldConstructor = (
+  viewContainerRef: ViewContainerRef,
+  options: FieldOptions
+) => void;
 
 export enum Fields {
   TEXT = 'Text',
   HOST = 'Host-Folder',
+}
+
+export interface FieldOptions {
+  id: string;
+  controlName: string;
+  value: string;
 }

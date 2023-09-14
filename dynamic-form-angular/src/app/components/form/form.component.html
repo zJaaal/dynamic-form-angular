@@ -1,12 +1,11 @@
-<p>form works!</p>
-
-<form>
+<form [formGroup]="myForm">
   <div class="row" *ngFor="let row of fields">
     <div class="column" *ngFor="let column of row.columns">
       <app-field
         *ngFor="let field of column.fields"
-        [label]="field.name"
+        [controlName]="field.name"
         [hint]="field.hint"
+        [fieldType]="field.fieldType"
       >
       </app-field>
     </div>
